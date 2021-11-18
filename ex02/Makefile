@@ -1,4 +1,4 @@
-# Makefile for Old-CPP Module 05 ex02, updated Fri Nov 19 02:58:57 JST 2021
+# Makefile for Old-CPP Module 05 ex02, updated Fri Nov 19 06:25:51 JST 2021
 
 SRC := AForm.cpp Bureaucrat.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp main.cpp
 OBJ := AForm.o Bureaucrat.o PresidentialPardonForm.o RobotomyRequestForm.o ShrubberyCreationForm.o main.o
@@ -52,6 +52,7 @@ memory: re
 .PHONY: clean
 clean:
 	$(RM) Makefile.bak $(NAME).dSYM $(OBJ_DIR)
+	$(RM) *_shrubbery
 
 .PHONY: fclean
 fclean: clean

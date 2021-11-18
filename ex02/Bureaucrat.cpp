@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:49:00 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 01:16:39 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:03:02 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -57,6 +57,17 @@ void Bureaucrat::signForm(AForm& form) {
                   << std::endl;
     } catch (std::exception& e) {
         std::cout << this->getName() << " cannot sign " << form.getName()
+                  << " because " << e.what() << std::endl;
+    }
+}
+
+void Bureaucrat::executeForm(AForm const& form) const {
+    try {
+        form.execute(*this);
+        std::cout << this->getName() << " executes " << form.getName()
+                  << std::endl;
+    } catch (std::exception& e) {
+        std::cout << this->getName() << " cannot execute " << form.getName()
                   << " because " << e.what() << std::endl;
     }
 }

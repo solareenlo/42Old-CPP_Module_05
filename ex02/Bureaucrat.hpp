@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:38:53 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 01:17:03 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:01:50 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ class Bureaucrat {
     void decrementGrade();
 
     void signForm(AForm& form);
+    void executeForm(AForm const& form) const;
 
     class GradeTooHighException : public std::exception {
      public:
