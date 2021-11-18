@@ -6,12 +6,12 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 15:54:08 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/18 20:27:40 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/18 20:47:57 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP_
-#define FORM_HPP_
+#ifndef EX01_FORM_HPP_
+#define EX01_FORM_HPP_
 
 #include <string>
 
@@ -59,4 +59,4 @@ class Form {
 
 std::ostream& operator<<(std::ostream& ostream, Form const& rhs);
 
-#endif  // FORM_HPP_
+#endif  // EX01_FORM_HPP_

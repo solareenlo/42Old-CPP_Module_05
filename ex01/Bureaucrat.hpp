@@ -6,12 +6,12 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:38:53 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/18 20:11:05 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/18 20:51:08 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
-#ifndef EX00_BUREAUCRAT_HPP_
-#define EX00_BUREAUCRAT_HPP_
+#ifndef EX01_BUREAUCRAT_HPP_
+#define EX01_BUREAUCRAT_HPP_
 
 #include <exception>
 #include <iostream>
@@ -36,7 +36,7 @@ class Bureaucrat {
     void incrementGrade();
     void decrementGrade();
 
-    void signForm(Form& form) const;
+    void signForm(Form* form);
 
  private:
     static const int HIGHEST_GRADE_ = 1;
@@ -61,4 +61,4 @@ class Bureaucrat {
 
 std::ostream& operator<<(std::ostream& ostream, Bureaucrat const& rhs);
 
-#endif  // EX00_BUREAUCRAT_HPP_
+#endif  // EX01_BUREAUCRAT_HPP_
