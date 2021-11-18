@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 01:58:45 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 02:50:19 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 02:52:58 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -39,4 +39,5 @@ class RobotomyRequestForm : public AForm {
 
     void action() const;
 };
+
 #endif  // EX02_ROBOTOMYREQUESTFORM_HPP_

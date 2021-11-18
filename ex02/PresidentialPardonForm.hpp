@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/18 22:38:26 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 02:52:51 by tayamamo         ###   ########.fr       */
+/*   Created: 2021/11/19 02:52:25 by tayamamo          #+#    #+#             */
+/*   Updated: 2021/11/19 03:00:32 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
-#ifndef EX02_SHRUBBERYCREATIONFORM_HPP_
-#define EX02_SHRUBBERYCREATIONFORM_HPP_
+#ifndef EX02_PRESIDENTIALPARDONFORM_HPP_
+#define EX02_PRESIDENTIALPARDONFORM_HPP_
 
 #include <fstream>
 #include <string>
@@ -21,23 +21,22 @@
 
 class Bureaucrat;
 
-class ShrubberyCreationForm : public AForm {
+class PresidentialPardonForm : public AForm {
  public:
-    explicit ShrubberyCreationForm(std::string const& target);
-    virtual ~ShrubberyCreationForm();
-    ShrubberyCreationForm(ShrubberyCreationForm const& src);
+    PresidentialPardonForm(std::string const& target);
+    virtual ~PresidentialPardonForm();
+    PresidentialPardonForm(PresidentialPardonForm const& src);
 
-    ShrubberyCreationForm& operator=(ShrubberyCreationForm const& rhs);
+    PresidentialPardonForm& operator=(PresidentialPardonForm const& rhs);
 
  private:
-    ShrubberyCreationForm();
+    PresidentialPardonForm();
 
     static const char* FORM_NAME_;
-    static const int SIGN_GRADE_ = 145;
-    static const int EXEC_GRADE_ = 137;
-    static const char* ASCII_TREE_;
+    static const int SIGN_GRADE_ = 25;
+    static const int EXEC_GRADE_ = 5;
 
     void action() const;
 };
 
-#endif  // EX02_SHRUBBERYCREATIONFORM_HPP_
+#endif  // EX02_PRESIDENTIALPARDONFORM_HPP_
