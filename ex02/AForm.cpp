@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 20:08:59 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 01:15:40 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 01:50:07 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -75,11 +75,9 @@ void AForm::beSigned(Bureaucrat const& src) {
 void AForm::execute(Bureaucrat const& executer) const {
     if (this->getSigned() == false) {
         throw AForm::NotSignedException();
-        return;
     }
     if (executer.getGrade() > this->getExecGrade()) {
         throw AForm::GradeTooLowException();
-        return;
     }
     this->action();
 }

@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:12:18 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 01:29:41 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 01:52:51 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 // #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 
-void _test_shrubbery(std::string const& name_bure, int grade,
-                     std::string const& target) {
+void _test_shrubbery(std::string const& test_name, std::string const& name_bure,
+                     int grade, std::string const& target) {
     try {
-        std::cout << "< " << name_bure << "'s test >" << std::endl;
+        std::cout << "< " << test_name << " >" << std::endl;
 
         Bureaucrat bure(name_bure, grade);
         std::cout << bure;
@@ -33,6 +33,7 @@ void _test_shrubbery(std::string const& name_bure, int grade,
         std::cout << form;
 
         form.execute(bure);
+        std::cout << name_bure << " executed " << form.getName() << std::endl;
         std::cout << std::endl;
     } catch (Bureaucrat::GradeTooHighException& e) {
         std::cout << "Bureaucrat Error: " << e.what() << std::endl;
@@ -114,11 +115,11 @@ void _test_shrubbery(std::string const& name_bure, int grade,
 
 int main() {
     std::cout << "<< SHURUBBERY TESTS >>" << std::endl;
-    _test_shrubbery("Akira", 10, "test1");
-    _test_shrubbery("Tetsuo", 140, "test2");
-    _test_shrubbery("Kiyoko", 150, "test3");
-    _test_shrubbery("A", 999, "test4");
-    _test_shrubbery("B", -999, "test5");
+    _test_shrubbery("Bure: OK, Sign: OK, Exec: OK", "Akira", 10, "test1");
+    _test_shrubbery("Bure: OK, Sign: OK, Exec: NG", "Tetsuo", 140, "test2");
+    _test_shrubbery("Bure: OK, Sign: NG, Exec: NG", "Kiyoko", 150, "test3");
+    _test_shrubbery("Bure: NG, Sign: NG, Exec: NG", "A", 999, "test4");
+    _test_shrubbery("Bure: NG, Sign: NG, Exec: NG", "B", -999, "test5");
 
     // std::cout << "<ROBOTOMY TESTS>" << std::endl;
     // _test_robotomy("Akira", 10, "test11");
