@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:12:18 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/18 15:38:42 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/18 15:50:51 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main() {
     runTest("Kaneda", 1);
     runTest("Tetsuo", 150);
     runTest("Akira", 100);
-    runTest("Kiyoko", 150);
+    runTest("Kiyoko", 149);
     runTest("Takashi", -999);
     runTest("Masaru", 999);
     return 0;
