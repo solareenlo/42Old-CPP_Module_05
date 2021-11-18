@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 02:52:25 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 03:00:32 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 05:06:21 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Bureaucrat;
 
 class PresidentialPardonForm : public AForm {
  public:
-    PresidentialPardonForm(std::string const& target);
+    explicit PresidentialPardonForm(std::string const& target);
     virtual ~PresidentialPardonForm();
     PresidentialPardonForm(PresidentialPardonForm const& src);
 
