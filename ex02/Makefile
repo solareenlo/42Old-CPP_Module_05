@@ -1,7 +1,7 @@
-# Makefile for Old-CPP Module 05 ex02, updated Fri Nov 19 01:13:53 JST 2021
+# Makefile for Old-CPP Module 05 ex02, updated Fri Nov 19 02:37:49 JST 2021
 
-SRC := AForm.cpp Bureaucrat.cpp ShrubberyCreationForm.cpp main.cpp
-OBJ := AForm.o Bureaucrat.o ShrubberyCreationForm.o main.o
+SRC := AForm.cpp Bureaucrat.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp main.cpp
+OBJ := AForm.o Bureaucrat.o RobotomyRequestForm.o ShrubberyCreationForm.o main.o
 
 # DO NOT ADD OR MODIFY ANY LINES ABOVE THIS -- run 'make source' to add files
 
