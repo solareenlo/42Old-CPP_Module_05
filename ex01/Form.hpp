@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 15:54:08 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/18 20:47:57 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/18 20:59:28 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Form {
     int const getGradeRequiredToExecute() const;
     int const getGradeRequiredToSign() const;
 
-    void beSigned(Bureaucrat const& bure);
+    void beSigned(Bureaucrat const& src);
 
  private:
     static const int HIGHEST_GRADE_ = 1;
@@ -43,6 +43,8 @@ class Form {
     bool signed_;
     int const grade_required_to_execute_;
     int const grade_required_to_sign_;
+
+    void setSigned(bool sign);
 
     void checkGrade(int grade) const;
 

@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 20:08:59 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/18 20:28:47 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/18 21:01:52 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -43,4 +43,31 @@ Form& Form::operator=(Form const& rhs) {
         this->signed_ = rhs.getSigned();
     }
     return *this;
+}
+
+std::string const Form::getName() const { return this->name_; }
+bool Form::getSigned() const { return this->signed_; }
+
+int const Form::getGradeRequiredToSign() const {
+    return this->grade_required_to_sign_;
+}
+
+int const Form::getGradeRequiredToExecute() const {
+    return this->grade_required_to_execute_;
+}
+
+void Form::beSigned(Bureaucrat const& src) {
+    if (src.getGrade() > this->grade_required_to_sign_) {
+        throw Form::GradeTooLowException();
+    }
+    this->setSigned(true);
+}
+
+void Form::checkGrade(int grade) const {
+    if (grade > Form::LOWEST_GRADE_) {
+        throw Form::GradeTooLowException();
+    }
+    if (grade < Form::HIGHEST_GRADE_) {
+        throw Form::GradeTooHighException();
+    }
 }
