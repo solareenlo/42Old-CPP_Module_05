@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:49:00 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 06:29:14 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:53:31 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void Bureaucrat::decrementGrade() {
     this->setGrade(this->getGrade() + 1);
 }
 
-void Bureaucrat::signForm(AForm& form) {
+void Bureaucrat::signForm(Form& form) {
     try {
         form.beSigned(*this);
         std::cout << this->getName() << " signs " << form.getName()
@@ -61,7 +61,7 @@ void Bureaucrat::signForm(AForm& form) {
     }
 }
 
-void Bureaucrat::executeForm(AForm const& form) const {
+void Bureaucrat::executeForm(Form const& form) const {
     try {
         form.execute(*this);
         std::cout << this->getName() << " executes " << form.getName()

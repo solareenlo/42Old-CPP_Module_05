@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:12:18 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 06:46:47 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:53:32 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void _test_intern(std::string const& name, std::string const& target) {
     std::cout << "< " << name << " >" << std::endl;
 
     Intern someRandomIntern;
-    AForm* rrf;
+    Form* rrf;
     Bureaucrat bure("Akira", 1);
 
     rrf = someRandomIntern.makeForm(name, target);

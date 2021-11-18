@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 05:08:46 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 05:53:10 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:54:51 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 
 #include <string>
 
-#include "AForm.hpp"
+#include "Form.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
-
-typedef AForm Form;
 
 class Intern {
  public:
