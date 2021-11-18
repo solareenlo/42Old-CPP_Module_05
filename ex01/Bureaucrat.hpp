@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 13:38:53 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/18 21:51:23 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/18 22:15:59 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -38,16 +38,6 @@ class Bureaucrat {
 
     void signForm(Form& form);
 
- private:
-    static const int HIGHEST_GRADE_ = 1;
-    static const int LOWEST_GRADE_ = 150;
-
-    std::string const name_;
-    int grade_;
-
-    void setGrade(int grade);
-    void checkGrade(int grade);
-
     class GradeTooHighException : public std::exception {
      public:
         char const* what() const throw();
@@ -57,6 +47,16 @@ class Bureaucrat {
      public:
         char const* what() const throw();
     };
+
+ private:
+    static const int HIGHEST_GRADE_ = 1;
+    static const int LOWEST_GRADE_ = 150;
+
+    std::string const name_;
+    int grade_;
+
+    void setGrade(int grade);
+    void checkGrade(int grade);
 };
 
 std::ostream& operator<<(std::ostream& ostream, Bureaucrat const& rhs);

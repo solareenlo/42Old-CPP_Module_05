@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:12:18 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/18 21:56:03 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/18 22:18:39 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <string>
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 void runTest(std::string const& name_bure, int grade,
              std::string const& name_form, int sign_grade, int exec_grade) {
@@ -26,6 +27,18 @@ void runTest(std::string const& name_bure, int grade,
         Form form(name_form, sign_grade, exec_grade);
         bure.signForm(form);
         std::cout << form << std::endl;
+    } catch (Bureaucrat::GradeTooHighException& e) {
+        std::cout << "Bureaucrat Error: " << e.what() << std::endl;
+        std::cout << std::endl;
+    } catch (Bureaucrat::GradeTooLowException& e) {
+        std::cout << "Bureaucrat Error: " << e.what() << std::endl;
+        std::cout << std::endl;
+    } catch (Form::GradeTooHighException& e) {
+        std::cout << "Form Error: " << e.what() << std::endl;
+        std::cout << std::endl;
+    } catch (Form::GradeTooLowException& e) {
+        std::cout << "Form Error: " << e.what() << std::endl;
+        std::cout << std::endl;
     } catch (std::exception& e) {
         std::cout << "Error: " << e.what() << std::endl;
         std::cout << std::endl;

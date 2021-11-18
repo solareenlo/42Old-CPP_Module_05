@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 15:54:08 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/18 21:14:03 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/18 22:13:39 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -35,6 +35,16 @@ class Form {
 
     void beSigned(Bureaucrat const& src);
 
+    class GradeTooHighException : public std::exception {
+     public:
+        char const* what() const throw();
+    };
+
+    class GradeTooLowException : public std::exception {
+     public:
+        char const* what() const throw();
+    };
+
  private:
     static const int HIGHEST_GRADE_ = 1;
     static const int LOWEST_GRADE_ = 150;
@@ -47,16 +57,6 @@ class Form {
     void setSigned(bool sign);
 
     void checkGrade(int grade) const;
-
-    class GradeTooHighException : public std::exception {
-     public:
-        char const* what() const throw();
-    };
-
-    class GradeTooLowException : public std::exception {
-     public:
-        char const* what() const throw();
-    };
 };
 
 std::ostream& operator<<(std::ostream& ostream, Form const& rhs);
