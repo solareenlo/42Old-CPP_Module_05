@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 02:52:25 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 05:06:21 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:56:40 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 #include <fstream>
 #include <string>
 
-#include "AForm.hpp"
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 class Bureaucrat;
 
-class PresidentialPardonForm : public AForm {
+class PresidentialPardonForm : public Form {
  public:
     explicit PresidentialPardonForm(std::string const& target);
     virtual ~PresidentialPardonForm();

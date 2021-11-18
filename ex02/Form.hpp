@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 15:54:08 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 01:49:35 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:56:39 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@
 
 class Bureaucrat;
 
-class AForm {
+class Form {
  public:
-    AForm();
-    AForm(std::string const& name, int grade_sign, int grade_exec);
-    AForm(std::string const& name, int grade_sign, int grade_exec,
-          std::string const& target);
-    virtual ~AForm();
-    AForm(AForm const& src);
+    Form();
+    Form(std::string const& name, int grade_sign, int grade_exec);
+    Form(std::string const& name, int grade_sign, int grade_exec,
+         std::string const& target);
+    virtual ~Form();
+    Form(Form const& src);
 
-    AForm& operator=(AForm const& rhs);
+    Form& operator=(Form const& rhs);
 
     std::string const getName() const;
     bool getSigned() const;
@@ -72,6 +72,6 @@ class AForm {
     virtual void action() const = 0;
 };
 
-std::ostream& operator<<(std::ostream& ostream, AForm const& rhs);
+std::ostream& operator<<(std::ostream& ostream, Form const& rhs);
 
 #endif  // EX02_AFORM_HPP_

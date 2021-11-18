@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 23:10:42 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 01:11:37 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:56:46 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -26,20 +26,20 @@ char const* ShrubberyCreationForm::ASCII_TREE_ =
     "      |.|        |.|         |'|\n";
 
 ShrubberyCreationForm::ShrubberyCreationForm()
-    : AForm(this->FORM_NAME_, this->SIGN_GRADE_, this->EXEC_GRADE_) {}
+    : Form(this->FORM_NAME_, this->SIGN_GRADE_, this->EXEC_GRADE_) {}
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string const& target)
-    : AForm(this->FORM_NAME_, this->SIGN_GRADE_, this->EXEC_GRADE_, target) {}
+    : Form(this->FORM_NAME_, this->SIGN_GRADE_, this->EXEC_GRADE_, target) {}
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const& src)
-    : AForm(src) {}
+    : Form(src) {}
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(
     ShrubberyCreationForm const& rhs) {
     if (this != &rhs) {
-        AForm::operator=(rhs);
+        Form::operator=(rhs);
     }
     return *this;
 }

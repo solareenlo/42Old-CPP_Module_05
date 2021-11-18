@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:12:18 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 06:23:38 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:58:14 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ void _test_shrubbery(std::string const& test_name, std::string const& name_bure,
     } catch (Bureaucrat::GradeTooLowException& e) {
         std::cout << "Bureaucrat Error: " << e.what() << std::endl;
         std::cout << std::endl;
-    } catch (AForm::NotSignedException& e) {
+    } catch (Form::NotSignedException& e) {
         std::cout << "Form Error: " << e.what() << std::endl;
         std::cout << std::endl;
-    } catch (AForm::GradeTooHighException& e) {
+    } catch (Form::GradeTooHighException& e) {
         std::cout << "Form Error: " << e.what() << std::endl;
         std::cout << std::endl;
-    } catch (AForm::GradeTooLowException& e) {
+    } catch (Form::GradeTooLowException& e) {
         std::cout << "Form Error: " << e.what() << std::endl;
         std::cout << std::endl;
     } catch (std::exception& e) {
@@ -166,6 +166,7 @@ int main() {
     _test_presidential("Bure: OK, Sign: NG, Exec: NG", "Kiyoko", 60, "test333");
     _test_presidential("Bure: NG, Sign: NG, Exec: NG", "A", 999, "test444");
     _test_presidential("Bure: NG, Sign: NG, Exec: NG", "B", -999, "test555");
+    std::cout << std::endl;
 
     std::cout << "<< BUREAUCRAT TESTS >>" << std::endl;
     _test_bure("Shru: NG, Robo: NG, Pre: NG", "Tetsuo", 140, "target01");

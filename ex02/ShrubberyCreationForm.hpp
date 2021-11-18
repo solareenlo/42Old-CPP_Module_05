@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 22:38:26 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 02:52:51 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:56:40 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 #include <fstream>
 #include <string>
 
-#include "AForm.hpp"
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 class Bureaucrat;
 
-class ShrubberyCreationForm : public AForm {
+class ShrubberyCreationForm : public Form {
  public:
     explicit ShrubberyCreationForm(std::string const& target);
     virtual ~ShrubberyCreationForm();

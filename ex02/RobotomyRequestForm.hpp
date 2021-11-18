@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 01:58:45 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 02:52:58 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:56:40 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 #include <fstream>
 #include <string>
 
-#include "AForm.hpp"
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 class Bureaucrat;
 
-class RobotomyRequestForm : public AForm {
+class RobotomyRequestForm : public Form {
  public:
     explicit RobotomyRequestForm(std::string const& target);
     virtual ~RobotomyRequestForm();

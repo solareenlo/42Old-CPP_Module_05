@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 02:01:55 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 03:02:54 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 06:56:45 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 char const* RobotomyRequestForm::FORM_NAME_ = "Robotomy";
 
 RobotomyRequestForm::RobotomyRequestForm()
-    : AForm(this->FORM_NAME_, this->SIGN_GRADE_, this->EXEC_GRADE_) {}
+    : Form(this->FORM_NAME_, this->SIGN_GRADE_, this->EXEC_GRADE_) {}
 
 RobotomyRequestForm::RobotomyRequestForm(std::string const& target)
-    : AForm(this->FORM_NAME_, this->SIGN_GRADE_, this->EXEC_GRADE_, target) {}
+    : Form(this->FORM_NAME_, this->SIGN_GRADE_, this->EXEC_GRADE_, target) {}
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const& src)
-    : AForm(src) {}
+    : Form(src) {}
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(
     RobotomyRequestForm const& rhs) {
     if (this != &rhs) {
-        AForm::operator=(rhs);
+        Form::operator=(rhs);
     }
     return *this;
 }
