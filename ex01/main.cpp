@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 14:12:18 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/18 15:50:51 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/18 21:56:03 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -15,26 +15,17 @@
 
 #include "Bureaucrat.hpp"
 
-void runTest(std::string const& name, int grade) {
+void runTest(std::string const& name_bure, int grade,
+             std::string const& name_form, int sign_grade, int exec_grade) {
     try {
-        std::cout << "< " << name << "'s test >" << std::endl;
+        std::cout << "< " << name_bure << "'s test >" << std::endl;
 
-        Bureaucrat bure(name, grade);
-        std::cout << bure;
-
-        bure.incrementGrade();
-        std::cout << bure;
-        bure.incrementGrade();
+        Bureaucrat bure(name_bure, grade);
         std::cout << bure;
 
-        bure.decrementGrade();
-        std::cout << bure;
-        bure.decrementGrade();
-        std::cout << bure;
-        bure.decrementGrade();
-        std::cout << bure;
-
-        std::cout << std::endl;
+        Form form(name_form, sign_grade, exec_grade);
+        bure.signForm(form);
+        std::cout << form << std::endl;
     } catch (std::exception& e) {
         std::cout << "Error: " << e.what() << std::endl;
         std::cout << std::endl;
@@ -42,11 +33,15 @@ void runTest(std::string const& name, int grade) {
 }
 
 int main() {
-    runTest("Kaneda", 1);
-    runTest("Tetsuo", 150);
-    runTest("Akira", 100);
-    runTest("Kiyoko", 149);
-    runTest("Takashi", -999);
-    runTest("Masaru", 999);
+    runTest("Akira", 10, "test1", 100, 100);
+    runTest("Tetsuo", 100, "test1", 10, 10);
+    runTest("Yamagata", 50, "test1", 10, 100);
+    runTest("Kiyoko", 100, "test1", -10, 10);
+    runTest("Takashi", 100, "test1", 10, -10);
+    runTest("Masaru", 100, "test1", 10, 999);
+    runTest("Taisa", 100, "test1", 999, 10);
+    runTest("A", 999, "test1", 999, 999);
+    runTest("B", -999, "test1", 999, 999);
+    runTest("C", 100, "test1", -999, -999);
     return 0;
 }

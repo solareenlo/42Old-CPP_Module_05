@@ -1,4 +1,4 @@
-# Makefile for Old-CPP Module 05 ex01, updated Thu Nov 18 20:30:22 JST 2021
+# Makefile for Old-CPP Module 05 ex01, updated Thu Nov 18 21:56:30 JST 2021
 
 SRC := Bureaucrat.cpp Form.cpp main.cpp
 OBJ := Bureaucrat.o Form.o main.o

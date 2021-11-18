@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 15:54:08 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/18 20:59:28 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/18 21:14:03 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ class Form {
 
     std::string const getName() const;
     bool getSigned() const;
-    int const getGradeRequiredToExecute() const;
-    int const getGradeRequiredToSign() const;
+    int getGradeRequiredToExecute() const;
+    int getGradeRequiredToSign() const;
 
     void beSigned(Bureaucrat const& src);
 
