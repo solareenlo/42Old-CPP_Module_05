@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AForm.hpp                                          :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 15:54:08 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/19 06:53:29 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/19 13:12:24 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
-#ifndef EX03_AFORM_HPP_
-#define EX03_AFORM_HPP_
+#ifndef EX03_FORM_HPP_
+#define EX03_FORM_HPP_
 
 #include <string>
 
@@ -74,4 +74,4 @@ class Form {
 
 std::ostream& operator<<(std::ostream& ostream, Form const& rhs);
 
-#endif  // EX03_AFORM_HPP_
+#endif  // EX03_FORM_HPP_
